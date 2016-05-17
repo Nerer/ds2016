@@ -29,7 +29,7 @@ void error()
 void TestInteger()
 {
 	std::cout << "Test 1 : Test for classes without default constructor...";
-	std::deque<Integer> dInt;
+	sjtu::deque<Integer> dInt;
 	std::vector<Integer> vInt;
 	for (int i = 0; i < N; ++i) {
 		vInt.push_back(Integer(randNum(i, N + 17)));
@@ -44,7 +44,7 @@ void TestInteger()
 void TestMatrix()
 {
 	std::cout << "Test 2 : Test for Matrix, a class with dynamic members...";
-	std::deque<Diamond::Matrix<double>> dM;
+	sjtu::deque<Diamond::Matrix<double>> dM;
 	std::vector<Diamond::Matrix<double>> vM;
 	for (int i = 0; i < N; ++i) {
 		vM.push_back(Diamond::Matrix<double>(randNum(i + 1, 10 + 7), randNum(i + 2, 10 + 7), randNum(i + 3, (100 + 17)) * 1.0 / randNum(i, 17)));
@@ -60,7 +60,7 @@ void TestMatrix()
 void TestBint()
 {
 	std::cout << "Test 3 : Test for big integer...";
-	std::deque<Util::Bint> dBint;
+	sjtu::deque<Util::Bint> dBint;
 	std::vector<Util::Bint> vBint;
 	for (long long i = 1LL << 50; i < (1LL << 50) + N; ++i) {
 		vBint.push_back(Util::Bint(i) * randNum(i, (1 << 25) ));
@@ -77,14 +77,14 @@ void TestBint()
 void TestCopyConstructorAndOperatorEqu()
 {
 	std::cout << "Test 4 : Test for copy constructor and operator=...";
-	std::deque<long long> *pInt;
-	pInt = new std::deque<long long>;
+	sjtu::deque<long long> *pInt;
+	pInt = new sjtu::deque<long long>;
 	for (long long i = 0; i < N; ++i) {
 		pInt -> push_back(i);
 	}
-	std::deque<long long> &dInt = *pInt;
-	std::deque<long long> dualInt(dInt);
-	std::deque<long long> dualInt_oper;
+	sjtu::deque<long long> &dInt = *pInt;
+	sjtu::deque<long long> dualInt(dInt);
+	sjtu::deque<long long> dualInt_oper;
 	dualInt_oper = dInt;
 	for (long long i = 0; i < N; ++i)
 	{
@@ -104,11 +104,11 @@ void TestCopyConstructorAndOperatorEqu()
 void TestIteratorSequenceAccess()
 {
 	std::cout << "Test 5 : Test for accessing the container in the order of the sequence, using iterator...";
-	std::deque<long long> dInt;
+	sjtu::deque<long long> dInt;
 	for (long long i = 0; i < N; ++i) {
 		dInt.push_back(i);
 	}
-	std::deque<long long> :: iterator it;
+	sjtu::deque<long long> :: iterator it;
 	it = dInt.begin();
 	for (long long i = 0; i < N; ++i) {
 		if (!(*it == dInt[i]))
@@ -123,7 +123,7 @@ void TestIteratorSequenceAccess()
 void TestIteratorRandomAccess()
 {
 	std::cout << "Test 6 : Test for accessing the container randomly, using iterator...";
-	std::deque<long long> dInt;
+	sjtu::deque<long long> dInt;
 	std::vector<long long> vInt;
 	for (long long i = 0; i < N; ++i) {
 		dInt.push_back(i);
@@ -139,7 +139,7 @@ void TestIteratorRandomAccess()
 void TestInsertAndErase()
 {
 	std::cout << "Test 7 : Test for random erase and insert...";
-	std::deque<long long> dInt;
+	sjtu::deque<long long> dInt;
 	std::vector<long long> vInt;
 	for (long long i = 0; i < N; ++i) {
 		dInt.push_back(i);
@@ -163,7 +163,7 @@ void TestInsertAndErase()
 void TestPopAndPush()
 {
 	std::cout << "Test 8 : Test for pop() and push()...";
-	std::deque<long long> dInt, drInt;
+	sjtu::deque<long long> dInt, drInt;
 	std::vector<long long> vInt;
 	std::vector<long long> rInt;
 	for (size_t i = 0; i < 1114LL; ++i)
