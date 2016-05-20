@@ -13,7 +13,7 @@
 
 std::default_random_engine randnum(time(NULL));
 
-static const int MAX_N = 15000;
+static const int MAX_N = 5000;
 
 template <typename Ans, typename Test>
 bool isEqual(Ans &ans, Test &test) {

@@ -11,7 +11,7 @@
 //std::default_random_engine randnum(time(NULL));
 
 static const int N = 10000;
-static const int N_SPEED = 210000;
+static const int N_SPEED = 21000;
 
 typedef std::pair<const char *, std::pair<bool, double> (*)()> CheckerPair;
 

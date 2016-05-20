@@ -261,20 +261,11 @@ void Speed_test(){
 		else Q.push_front(t); 		
 	}		
 	int n = 800000;
-	sjtu::deque<int>::iterator it;			
-	for(int i = 1; i <= 400000; i++){
-		it = Q.begin(); 
+	sjtu::deque<int>::iterator it;
+	int tmp;
+	for (int i = 1; i <= n / 4; ++i) {
 		int x = rand() % n;
-		it += x; 
-		it = Q.erase(it); 
-		n--;
-	}
-	for(int i = 1; i <= 400000; i++){
-		it = Q.begin(); 
-		int x = rand() % n;
-		it += x; 
-		it = Q.insert(it, x); 
-		n++;
+		tmp = Q[x];
 	}
 	it = Q.begin();
 	for(int i = 1; i <= 2000000; i++) *it;
