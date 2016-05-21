@@ -79,15 +79,23 @@ def Test(stuPath, stuName, testName):
 	timeLimitFile.close()
 	if CompileTest(testName, compileOut):
 		try:
-			subprocess.run(["testspace/%s" % (testName)], stdout = testOut, timeout = timeLimit, check = True)
-			if CheckAns(testOutFilename, "testans/testans-%s" % (testName), diffOut):
+			timeres = open(stuPath + ("/testres/time-%s" % (testName)), "w")
+			subprocess.run(["time", "-f", "%U", "testspace/%s" % (testName)], stdout = testOut, stderr = timeres, timeout = timeLimit * 2, check = True)
+			timeres.close()
+			timeres = open(stuPath + ("/testres/time-%s" % (testName)), "r")
+			userTime = timeres.readline()
+			userTime = float(userTime[:-1])
+			if userTime > timeLimit :
+				print("%s: %s: failed (Timeout: user time exceeded)." % (stuName, testName))
+				return 4
+			elif CheckAns(testOutFilename, "testans/testans-%s" % (testName), diffOut):
 				print("%s: %s: passed." % (stuName, testName))
 				return 0
 			else:
 				print("%s: %s: failed (Wrong Answer)." % (stuName, testName))
 				return 1
 		except subprocess.TimeoutExpired:
-			print("%s: %s: failed (Timeout)." % (stuName, testName))
+			print("%s: %s: failed (Timeout: total time exceeded)." % (stuName, testName))
 			return 4
 		except subprocess.CalledProcessError:
 			print("%s: %s: failed (Runtime Error)." % (stuName, testName))
