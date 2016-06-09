@@ -262,7 +262,7 @@ void test6(){
 }
 void test7(){
 	printf("test7: complexity                    ");
-	int num = 500000;
+	int num = 100000;
 	static sjtu::deque<T> q;
 	for(int i = 0; i < num; i++) q.push_front(T(i));
 	for(int i = 0; i < num; i++) q.pop_front();
@@ -274,7 +274,7 @@ void test7(){
 		if(i % 10 <= 8) q.pop_back();else
 		if(i % 10 <= 9) q.pop_front();
 	}
-	int test_num = 5000000;
+	int test_num = 100000;
 	it_q = q.begin() + q.size() - 10;
 	for(int i = 0; i < test_num; i++)
 	{
@@ -296,14 +296,14 @@ void test7(){
 	}
 	if(good_complexity){
 		q.clear();
-		for(int i=0;i<4000000;i++)
+		for(int i=0;i<40000;i++)
 			q.push_back(i);
 		while (q.size()>2010){
 			if(rand() % 2) q.pop_front();
 				else q.pop_back();
 		}
 		int tmp;
-		for(int i=0;i<2000000;i++){
+		for(int i=0;i<20000;i++){
 			tmp = q[2000].num();
 			tmp = q[1000].num();
 		}
