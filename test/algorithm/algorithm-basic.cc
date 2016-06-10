@@ -60,7 +60,7 @@ void TestStdVectorSort()
 void TestSjtuVector()
 {
 	const int sizeN = 100000;
-	sjtu::vector<int> a;
+	std::vector<int> a;
 	sjtu::vector<int> b;
 	uniform_int_distribution<int> u(0, 121214545);
 	for (int i = 0; i < sizeN; ++i) {
@@ -77,6 +77,11 @@ void TestSjtuVector()
 	}
 	std::sort(a.begin(), a.end(), greater<int>());
 	sjtu::sort(b.begin(), b.end(), greater<int>());
+	for (int i = 0; i < sizeN; ++i) {
+		if (a[i] != b[i]) {
+			throw "sort std::vector failed";
+		}
+	}
 }
 
 void TestMakeHeap()
