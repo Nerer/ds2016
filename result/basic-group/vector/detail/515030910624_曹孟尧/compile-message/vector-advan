@@ -1,0 +1,57 @@
+In file included from ./testspace/vector.hpp:1:0,
+                 from ./testspace/vector-advan.cc:1:
+./testspace/../submit/515030910624_曹孟尧/vector.hpp: In member function ‘int sjtu::vector<T>::iterator::operator-(const sjtu::vector<T>::iterator&)’:
+./testspace/../submit/515030910624_曹孟尧/vector.hpp:80:52: error: expected primary-expression before ‘;’ token
+    if (belong != rhs.belong) throw invaild_iterator;
+                                                    ^
+./testspace/../submit/515030910624_曹孟尧/vector.hpp: In member function ‘int sjtu::vector<T>::const_iterator::operator-(const sjtu::vector<T>::const_iterator&)’:
+./testspace/../submit/515030910624_曹孟尧/vector.hpp:170:52: error: expected primary-expression before ‘;’ token
+    if (belong != rhs.belong) throw invaild_iterator;
+                                                    ^
+./testspace/../submit/515030910624_曹孟尧/vector.hpp: In member function ‘T& sjtu::vector<T>::at(const size_t&)’:
+./testspace/../submit/515030910624_曹孟尧/vector.hpp:269:32: error: expected primary-expression before ‘;’ token
+   else throw index_out_of_bound;
+                                ^
+./testspace/../submit/515030910624_曹孟尧/vector.hpp: In member function ‘const T& sjtu::vector<T>::at(const size_t&) const’:
+./testspace/../submit/515030910624_曹孟尧/vector.hpp:274:32: error: expected primary-expression before ‘;’ token
+   else throw index_out_of_bound;
+                                ^
+./testspace/../submit/515030910624_曹孟尧/vector.hpp: In member function ‘T& sjtu::vector<T>::operator[](const size_t&)’:
+./testspace/../submit/515030910624_曹孟尧/vector.hpp:285:32: error: expected primary-expression before ‘;’ token
+   else throw index_out_of_bound;
+                                ^
+./testspace/../submit/515030910624_曹孟尧/vector.hpp: In member function ‘const T& sjtu::vector<T>::operator[](const size_t&) const’:
+./testspace/../submit/515030910624_曹孟尧/vector.hpp:290:32: error: expected primary-expression before ‘;’ token
+   else throw index_out_of_bound;
+                                ^
+./testspace/../submit/515030910624_曹孟尧/vector.hpp: In member function ‘const T& sjtu::vector<T>::front() const’:
+./testspace/../submit/515030910624_曹孟尧/vector.hpp:299:43: error: expected primary-expression before ‘;’ token
+   if (size_ == 0) throw container_is_empty;
+                                           ^
+./testspace/../submit/515030910624_曹孟尧/vector.hpp: In member function ‘const T& sjtu::vector<T>::back() const’:
+./testspace/../submit/515030910624_曹孟尧/vector.hpp:307:43: error: expected primary-expression before ‘;’ token
+   if (size_ == 0) throw container_is_empty;
+                                           ^
+In file included from ./testspace/vector.hpp:1:0,
+                 from ./testspace/vector-advan.cc:1:
+./testspace/../submit/515030910624_曹孟尧/vector.hpp: In member function ‘void sjtu::vector<T>::pop_back()’:
+./testspace/../submit/515030910624_曹孟尧/vector.hpp:416:44: error: expected primary-expression before ‘;’ token
+   if (size() == 0) throw container_is_empty;
+                                            ^
+In file included from ./testspace/vector.hpp:1:0,
+                 from ./testspace/vector-advan.cc:1:
+./testspace/../submit/515030910624_曹孟尧/vector.hpp: In instantiation of ‘void sjtu::vector<T>::NewCapacity(int) [with T = Integer]’:
+./testspace/../submit/515030910624_曹孟尧/vector.hpp:411:24:   required from ‘void sjtu::vector<T>::push_back(const T&) [with T = Integer]’
+./testspace/vector-advan.cc:16:28:   required from here
+./testspace/../submit/515030910624_曹孟尧/vector.hpp:22:38: error: no matching function for call to ‘Integer::Integer()’
+         T* storage_ = new T[capacity_];
+                                      ^
+In file included from ./testspace/vector-advan.cc:3:0:
+./testspace/class-integer.hpp:6:2: note: candidate: Integer::Integer(const Integer&)
+  Integer(const Integer &other) : data(other.data) {}
+  ^
+./testspace/class-integer.hpp:6:2: note:   candidate expects 1 argument, 0 provided
+./testspace/class-integer.hpp:5:2: note: candidate: Integer::Integer(const int&)
+  Integer(const int &value) : data(value) {}
+  ^
+./testspace/class-integer.hpp:5:2: note:   candidate expects 1 argument, 0 provided

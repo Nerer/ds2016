@@ -3,7 +3,8 @@
 
 #include <functional>
 #include <cstddef>
-#include "map.hpp"
+#include "exceptions.hpp"
+#include "utility.hpp"
 
 namespace sjtu {
 
@@ -18,9 +19,7 @@ public:
 	 * the internal type of data.
 	 * it should have a default constructor, a copy constructor.
 	 */
-	class value_type {
-
-	};
+	typedef pair<const Key, T> value_type;
 	/**
 	 * see BidirectionalIterator at CppReference for help.
 	 */
@@ -46,27 +45,40 @@ public:
 		 */
 		iterator& operator++() {}
 		/**
-		 * TODO iter--
-		 */
-		iterator operator--(int) {}
-		/**
-		 * TODO --iter
-		 */
-		iterator& operator--() {}
-		/**
 		 * a operator to check whether two iterators are same (pointing to the same memory).
 		 */
-		T& operator*() const{}
-		bool operator==(const iterator &rhs) {}
-		bool operator==(const const_iterator &rhs) {}
+		value_type& operator*() const {}
+		bool operator==(const iterator &rhs) const {}
+		bool operator==(const const_iterator &rhs) const {}
 		/**
 		 * some other operator for iterator.
 		 */
-		bool operator!=(const iterator &rhs) {}
-		bool operator!=(const const_iterator &rhs) {}
+		bool operator!=(const iterator &rhs) const {}
+		bool operator!=(const const_iterator &rhs) const {}
+		/**
+		 * for the support of it->first. 
+		 * See <http://kelvinh.github.io/blog/2013/11/20/overloading-of-member-access-operator-dash-greater-than-symbol-in-cpp/> for help.
+		 */
+		value_type* operator->() const noexcept {}
 	};
 	class const_iterator {
-
+		// it should has similar member method as iterator.
+		//  and it should be able to construct from an iterator.
+		private:
+			// data members.
+		public:
+			const_iterator() {
+				// TODO
+			}
+			const_iterator(const const_iterator &other) {
+				// TODO
+			}
+			const_iterator(const iterator &other) {
+				// TODO
+			}
+			// And other methods in iterator.
+			// And other methods in iterator.
+			// And other methods in iterator.
 	};
 	/**
 	 * iterators for a certain hash value elements, behave like list::iterator
@@ -86,39 +98,52 @@ public:
 		/**
 		 * TODO iter++
 		 */
-		iterator operator++(int) {}
+		local_iterator operator++(int) {}
 		/**
 		 * TODO ++iter
 		 */
-		iterator& operator++() {}
-		/**
-		 * TODO iter--
-		 */
-		iterator operator--(int) {}
-		/**
-		 * TODO --iter
-		 */
-		iterator& operator--() {}
+		local_iterator& operator++() {}
 		/**
 		 * a operator to check whether two iterators are same (pointing to the same memory).
 		 */
-		T& operator*() const{}
-		bool operator==(const iterator &rhs) {}
-		bool operator==(const const_iterator &rhs) {}
+		value_type& operator*() const{}
+		bool operator==(const iterator &rhs) const {}
+		bool operator==(const const_iterator &rhs) const {}
 		/**
 		 * some other operator for iterator.
 		 */
-		bool operator!=(const iterator &rhs) {}
-		bool operator!=(const const_iterator &rhs) {}
+		bool operator!=(const iterator &rhs) const {}
+		bool operator!=(const const_iterator &rhs) const {}
+		/**
+		 * for the support of it->first. 
+		 * See <http://kelvinh.github.io/blog/2013/11/20/overloading-of-member-access-operator-dash-greater-than-symbol-in-cpp/> for help.
+		 */
+		value_type* operator->() const noexcept {}
 	};
 	class const_local_iterator {
-
+		// it should has similar member method as iterator.
+		//  and it should be able to construct from an iterator.
+		private:
+			// data members.
+		public:
+			const_local_iterator() {
+				// TODO
+			}
+			const_local_iterator(const const_local_iterator &other) {
+				// TODO
+			}
+			const_local_iterator(const iterator &other) {
+				// TODO
+			}
+			// And other methods in iterator.
+			// And other methods in iterator.
+			// And other methods in iterator.
 	};
 	/**
 	 * TODO Constructor
 	 */
 	unordered_map() {}
-	unordered_map(const unordered_map<Key, T, Hash, KeyEqual> &other) {}
+	unordered_map(const unordered_map &other) {}
 	/**
 	 * TODO Destructor
 	 */
@@ -126,7 +151,7 @@ public:
 	/**
 	 * TODO assignment operator
 	 */
-	unordered_map<Key, T, Hash, KeyEqual> &operator=(const unordered_map<Key, T, Hash, KeyEqual> &other) {}
+	unordered_map &operator=(const unordered_map &other) {}
 	/**
 	 * returns an iterator to the beginning
 	 */
@@ -167,7 +192,7 @@ public:
 	 *     since this container does not allow duplicates.
 	 * The default method of check the equivalence is !(a < b || b > a)
 	 */
-	size_t count() {}
+	size_t count(const Key &key) const {}
 	/**
 	 * Finds an element with key equivalent to key.
 	 * key value of the element to search for.
@@ -191,6 +216,7 @@ public:
 	 *   performing an insertion if such key does not already exist.
 	 */
 	T & operator[](const Key &key) {}
+	const T & operator[](const Key &key) const {}
 	/**
 	 * bucket interfaces
 	 */
@@ -211,11 +237,11 @@ public:
 	/**
 	 * returns the number of elements in specific bucket.
 	 */
-	size_t bucket_size() const {}
+	size_t bucket_size(const size_t &n) const {}
 	/**
 	 * returns average number of elements per buckets.
 	 */
-	size_t load_factor() const {}
+	double load_factor() const {}
 };
 }
 

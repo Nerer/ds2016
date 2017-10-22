@@ -31,7 +31,7 @@ class runtime_error : public exception {
 	/* __________________________ */
 };
 
-class invaild_iterator : public exception {
+class invalid_iterator : public exception {
 	/* __________________________ */
 };
 

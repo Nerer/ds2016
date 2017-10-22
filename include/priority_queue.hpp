@@ -3,11 +3,13 @@
 
 #include <cstddef>
 #include <functional>
+#include "exceptions.hpp"
 
 namespace sjtu {
 
 /**
  * a container like std::priority_queue which is a heap internal.
+ * it should be based on the vector written by yourself.
  */
 template<typename T, class Compare = std::less<T>>
 class priority_queue {
@@ -16,7 +18,7 @@ public:
 	 * TODO constructors
 	 */
 	priority_queue() {}
-	priority_queue(const priority_queue<T, Compare> &other) {}
+	priority_queue(const priority_queue &other) {}
 	/**
 	 * TODO deconstructor
 	 */
@@ -24,7 +26,7 @@ public:
 	/**
 	 * TODO Assignment operator
 	 */
-	priority_queue<T, Compare> &operator=(const priority_queue<T, Compare> &other) {}
+	priority_queue &operator=(const priority_queue &other) {}
 	/**
 	 * get the top of the queue.
 	 * @return a reference of the top element.

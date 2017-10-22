@@ -1,5 +1,5 @@
 /**
- * implement a container like std::vector
+ * implement a container like std::map
  */
 #ifndef SJTU_MAP_HPP
 #define SJTU_MAP_HPP
@@ -7,15 +7,10 @@
 // only for std::less<T>
 #include <functional>
 #include <cstddef>
+#include "utility.hpp"
+#include "exceptions.hpp"
 
 namespace sjtu {
-
-template<class FT, class ST>
-class pair {
-public:
-	FT first;
-	ST second;
-};
 
 template<
 	class Key,
@@ -26,12 +21,15 @@ public:
 	/**
 	 * the internal type of data.
 	 * it should have a default constructor, a copy constructor.
+	 * You can use sjtu::map as value_type by typedef.
 	 */
-	class value_type {
-
-	};
+	typedef pair<const Key, T> value_type;
 	/**
 	 * see BidirectionalIterator at CppReference for help.
+	 *
+	 * if there is anything wrong throw invalid_iterator.
+	 *     like it = map.begin(); --it;
+	 *       or it = map.end(); ++end();
 	 */
 	class const_iterator;
 	class iterator {
@@ -41,6 +39,12 @@ public:
 		 *   just add whatever you want.
 		 */
 	public:
+		iterator() {
+			// TODO
+		}
+		iterator(const iterator &other) {
+			// TODO
+		}
 		/**
 		 * return a new iterator which pointer n-next elements
 		 *   even if there are not enough elements, just return the answer.
@@ -53,7 +57,7 @@ public:
 		/**
 		 * TODO ++iter
 		 */
-		iterator& operator++() {}
+		iterator & operator++() {}
 		/**
 		 * TODO iter--
 		 */
@@ -61,31 +65,53 @@ public:
 		/**
 		 * TODO --iter
 		 */
-		iterator& operator--() {}
+		iterator & operator--() {}
 		/**
 		 * a operator to check whether two iterators are same (pointing to the same memory).
 		 */
-		T& operator*() const{}
-		bool operator==(const iterator &rhs) {}
-		bool operator==(const const_iterator &rhs) {}
+		value_type & operator*() const {}
+		bool operator==(const iterator &rhs) const {}
+		bool operator==(const const_iterator &rhs) const {}
 		/**
 		 * some other operator for iterator.
 		 */
-		bool operator!=(const iterator &rhs) {}
-		bool operator!=(const const_iterator &rhs) {}
+		bool operator!=(const iterator &rhs) const {}
+		bool operator!=(const const_iterator &rhs) const {}
+
+		/**
+		 * for the support of it->first. 
+		 * See <http://kelvinh.github.io/blog/2013/11/20/overloading-of-member-access-operator-dash-greater-than-symbol-in-cpp/> for help.
+		 */
+		value_type* operator->() const noexcept {}
 	};
 	class const_iterator {
-
+		// it should has similar member method as iterator.
+		//  and it should be able to construct from an iterator.
+		private:
+			// data members.
+		public:
+			const_iterator() {
+				// TODO
+			}
+			const_iterator(const const_iterator &other) {
+				// TODO
+			}
+			const_iterator(const iterator &other) {
+				// TODO
+			}
+			// And other methods in iterator.
+			// And other methods in iterator.
+			// And other methods in iterator.
 	};
 	/**
 	 * TODO two constructors
 	 */
 	map() {}
-	map(const map<Key, T, Compare> &other) {}
+	map(const map &other) {}
 	/**
 	 * TODO assignment operator
 	 */
-	map<Key, T, Compare> &operator=(const map<Key, T, Compare> &other) {}
+	map & operator=(const map &other) {}
 	/**
 	 * TODO Destructors
 	 */
@@ -105,6 +131,10 @@ public:
 	 *   performing an insertion if such key does not already exist.
 	 */
 	T & operator[](const Key &key) {}
+	/**
+	 * behave like at() throw index_out_of_bound if such key does not exist.
+	 */
+	const T & operator[](const Key &key) const {}
 	/**
 	 * return a iterator to the beginning
 	 */
@@ -138,6 +168,8 @@ public:
 	pair<iterator, bool> insert(const value_type &value) {}
 	/**
 	 * erase the element at pos.
+	 *
+	 * throw if pos pointed to a bad element (pos == this->end() || pos points an element out of this)
 	 */
 	void erase(iterator pos) {}
 	/**
@@ -147,7 +179,7 @@ public:
 	 *     since this container does not allow duplicates.
 	 * The default method of check the equivalence is !(a < b || b > a)
 	 */
-	size_t count() {}
+	size_t count(const Key &key) const {}
 	/**
 	 * Finds an element with key equivalent to key.
 	 * key value of the element to search for.

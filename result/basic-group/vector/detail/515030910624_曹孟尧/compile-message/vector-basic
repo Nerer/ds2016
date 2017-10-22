@@ -1,0 +1,40 @@
+In file included from ./testspace/vector.hpp:1:0,
+                 from ./testspace/vector-basic.cc:1:
+./testspace/../submit/515030910624_曹孟尧/vector.hpp: In member function ‘int sjtu::vector<T>::iterator::operator-(const sjtu::vector<T>::iterator&)’:
+./testspace/../submit/515030910624_曹孟尧/vector.hpp:80:52: error: expected primary-expression before ‘;’ token
+    if (belong != rhs.belong) throw invaild_iterator;
+                                                    ^
+./testspace/../submit/515030910624_曹孟尧/vector.hpp: In member function ‘int sjtu::vector<T>::const_iterator::operator-(const sjtu::vector<T>::const_iterator&)’:
+./testspace/../submit/515030910624_曹孟尧/vector.hpp:170:52: error: expected primary-expression before ‘;’ token
+    if (belong != rhs.belong) throw invaild_iterator;
+                                                    ^
+./testspace/../submit/515030910624_曹孟尧/vector.hpp: In member function ‘T& sjtu::vector<T>::at(const size_t&)’:
+./testspace/../submit/515030910624_曹孟尧/vector.hpp:269:32: error: expected primary-expression before ‘;’ token
+   else throw index_out_of_bound;
+                                ^
+./testspace/../submit/515030910624_曹孟尧/vector.hpp: In member function ‘const T& sjtu::vector<T>::at(const size_t&) const’:
+./testspace/../submit/515030910624_曹孟尧/vector.hpp:274:32: error: expected primary-expression before ‘;’ token
+   else throw index_out_of_bound;
+                                ^
+./testspace/../submit/515030910624_曹孟尧/vector.hpp: In member function ‘T& sjtu::vector<T>::operator[](const size_t&)’:
+./testspace/../submit/515030910624_曹孟尧/vector.hpp:285:32: error: expected primary-expression before ‘;’ token
+   else throw index_out_of_bound;
+                                ^
+./testspace/../submit/515030910624_曹孟尧/vector.hpp: In member function ‘const T& sjtu::vector<T>::operator[](const size_t&) const’:
+./testspace/../submit/515030910624_曹孟尧/vector.hpp:290:32: error: expected primary-expression before ‘;’ token
+   else throw index_out_of_bound;
+                                ^
+./testspace/../submit/515030910624_曹孟尧/vector.hpp: In member function ‘const T& sjtu::vector<T>::front() const’:
+./testspace/../submit/515030910624_曹孟尧/vector.hpp:299:43: error: expected primary-expression before ‘;’ token
+   if (size_ == 0) throw container_is_empty;
+                                           ^
+./testspace/../submit/515030910624_曹孟尧/vector.hpp: In member function ‘const T& sjtu::vector<T>::back() const’:
+./testspace/../submit/515030910624_曹孟尧/vector.hpp:307:43: error: expected primary-expression before ‘;’ token
+   if (size_ == 0) throw container_is_empty;
+                                           ^
+In file included from ./testspace/vector.hpp:1:0,
+                 from ./testspace/vector-basic.cc:1:
+./testspace/../submit/515030910624_曹孟尧/vector.hpp: In member function ‘void sjtu::vector<T>::pop_back()’:
+./testspace/../submit/515030910624_曹孟尧/vector.hpp:416:44: error: expected primary-expression before ‘;’ token
+   if (size() == 0) throw container_is_empty;
+                                            ^

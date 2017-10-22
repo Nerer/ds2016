@@ -3,6 +3,7 @@
 #include <cstring>
 #include <cstdlib>
 #include <vector>
+#include <stdexcept>
 
 namespace Util {
 
@@ -41,6 +42,7 @@ public:
 	friend Bint abs(Bint &&x);
 
 	friend bool operator==(const Bint &lhs, const Bint &rhs);
+	friend bool operator!=(const Bint &lhs, const Bint &rhs);
 	friend bool operator<(const Bint &lhs, const Bint &rhs);
 	friend bool operator>(const Bint &lhs, const Bint &rhs);
 	friend bool operator<=(const Bint &lhs, const Bint &rhs);
@@ -61,7 +63,6 @@ public:
 
 #include <iomanip>
 #include <algorithm>
-#include <stdexcept>
 
 namespace Util {
 
@@ -176,14 +177,14 @@ Bint::Bint(std::string x)
 }
 
 Bint::Bint(const Bint &b)
-	: capacity(b.capacity), length(b.length), isMinus(b.isMinus)
+	: isMinus(b.isMinus), length(b.length), capacity(b.capacity)
 {
 	_SafeNewSpace(data, capacity);
 	memcpy(data, b.data, sizeof(unsigned int) * capacity);
 }
 
 Bint::Bint(Bint &&b) noexcept
-	:capacity(b.capacity), length(b.length), isMinus(b.isMinus)
+	: isMinus(b.isMinus), length(b.length), capacity(b.capacity)
 {
 	data = b.data;
 	b.data = nullptr;
@@ -295,7 +296,7 @@ bool operator==(const Bint &lhs, const Bint &rhs)
 		return false;
 	}
 	if (lhs.length != rhs.length) {
-		return true;
+		return false;
 	}
 	for (size_t i = 0; i < lhs.length; ++i) {
 		if (lhs.data[i] != rhs.data[i]) {
@@ -303,6 +304,22 @@ bool operator==(const Bint &lhs, const Bint &rhs)
 		}
 	}
 	return true;
+}
+
+bool operator!=(const Bint &lhs, const Bint &rhs)
+{
+	if (lhs.isMinus != rhs.isMinus) {
+		return true;
+	}
+	if (lhs.length != rhs.length) {
+		return true;
+	}
+	for (size_t i = 0; i < lhs.length; ++i) {
+		if (lhs.data[i] != rhs.data[i]) {
+			return true;
+		}
+	}
+	return false;
 }
 
 bool operator<(const Bint &lhs, const Bint &rhs)

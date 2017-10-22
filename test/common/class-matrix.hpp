@@ -1,5 +1,3 @@
-#pragma once
-
 #ifndef DIAMOND_MATRIX_HPP
 #define DIAMOND_MATRIX_HPP
 
@@ -108,6 +106,20 @@ Matrix<_Td> operator-(const Matrix<_Td> &a, const Matrix<_Td> &b)
 		}
 	}
 	return c;
+}
+template<typename _Td>
+bool operator==(const Matrix<_Td> &a, const Matrix<_Td> &b)
+{
+	if (a.RowSize() != b.RowSize() || a.ColSize() != b.ColSize()) {
+		return false;
+	}
+	for (size_t i = 0; i < a.RowSize(); ++i) {
+		for (size_t j = 0; j < a.ColSize(); ++j) {
+			if (a[i][j] != b[i][j])
+				return false;
+		}
+	}
+	return true;
 }
 
 template<typename _Td>

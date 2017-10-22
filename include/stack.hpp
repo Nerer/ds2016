@@ -18,7 +18,7 @@ public:
 	 * TODO constructors
 	 */
 	stack() {}
-	stack(const stack<T, ListType> &other) {}
+	stack(const stack &other) {}
 	/**
 	 * TODO deconstructor
 	 */
@@ -26,7 +26,7 @@ public:
 	/**
 	 * TODO Assignment operator
 	 */
-	stack<T, ListType> &operator=(const stack<T, ListType> &other) {}
+	stack &operator=(const stack &other) {}
 	
 	/**
 	 * get the top of the stack.

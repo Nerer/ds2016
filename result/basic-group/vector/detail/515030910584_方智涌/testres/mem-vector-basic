@@ -1,0 +1,20 @@
+==1708== Memcheck, a memory error detector
+==1708== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==1708== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==1708== Command: testspace/vector-basic
+==1708== 
+==1708== 
+==1708== HEAP SUMMARY:
+==1708==     in use at exit: 72,704 bytes in 1 blocks
+==1708==   total heap usage: 12 allocs, 11 frees, 113,984 bytes allocated
+==1708== 
+==1708== LEAK SUMMARY:
+==1708==    definitely lost: 0 bytes in 0 blocks
+==1708==    indirectly lost: 0 bytes in 0 blocks
+==1708==      possibly lost: 0 bytes in 0 blocks
+==1708==    still reachable: 72,704 bytes in 1 blocks
+==1708==         suppressed: 0 bytes in 0 blocks
+==1708== Rerun with --leak-check=full to see details of leaked memory
+==1708== 
+==1708== For counts of detected and suppressed errors, rerun with: -v
+==1708== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

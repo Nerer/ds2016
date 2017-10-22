@@ -1,6 +1,8 @@
 #ifndef SJTU_LIST_HPP
 #define SJTU_LIST_HPP
 
+#include "exceptions.hpp"
+
 #include <cstddef>
 
 namespace sjtu {
@@ -44,13 +46,17 @@ public:
 		 * a operator to check whether two iterators are same (pointing to the same memory).
 		 */
 		T& operator*() const{}
-		bool operator==(const iterator &rhs) {}
-		bool operator==(const const_iterator &rhs) {}
+		bool operator==(const iterator &rhs) const {}
+		bool operator==(const const_iterator &rhs) const {}
 		/**
 		 * some other operator for iterator.
 		 */
-		bool operator!=(const iterator &rhs) {}
-		bool operator!=(const const_iterator &rhs) {}
+		bool operator!=(const iterator &rhs) const {}
+		bool operator!=(const const_iterator &rhs) const {}
+		/**
+		 * operator->
+		 */
+		T* operator->() const {}
 	};
 	class const_iterator {
 
@@ -60,7 +66,7 @@ public:
 	 * Constructors at least a default constructor and a copy constructor
 	 */
 	list() {}
-	list(const list<T> &other) {}
+	list(const list &other) {}
 	/**
 	 * TODO Destructor
 	 */
@@ -69,7 +75,7 @@ public:
 	 * TODO
 	 * assignment operator
 	 */
-	list<T> & operator=(const list<T> &other) {}
+	list &operator=(const list &other) {}
 	/**
 	 * access the first element
 	 * throw container_is_empty when it is empty.
@@ -110,13 +116,15 @@ public:
 	/**
 	 * removes the element at pos.
 	 * returns an iterator following the last removed element.
+	 * If there was anything wrong with the iterator, throw invalid_iterator.
 	 * If the iterator pos refers to the last element, the end() iterator is returned.
 	 */
 	iterator erase(iterator pos) {}
 	/**
 	 * removes the elements in range [first, last).
 	 * returns an iterator following the last removed element.
-	 * If the iterator pos refers to the last element, the end() iterator is returned.
+	 * If there was anything wrong with these iterators, throw invalid_iterator.
+	 * In this case, return last.
 	 */
 	iterator erase(iterator first, iterator last) {}
 	/**

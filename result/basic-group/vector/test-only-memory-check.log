@@ -1,0 +1,126 @@
+core: start testing 515021910153_盛佩瑶
+515021910153_盛佩瑶: preparing the test...
+515021910153_盛佩瑶: generated the headers.
+515021910153_盛佩瑶: vector-basic: checking memory use,
+515021910153_盛佩瑶: vector-basic: memory check completed, report at 'res/515021910153_盛佩瑶/testres/mem-vector-basic'.
+515021910153_盛佩瑶: vector-advan: checking memory use,
+515021910153_盛佩瑶: vector-advan: memory check completed, report at 'res/515021910153_盛佩瑶/testres/mem-vector-advan'.
+515021910153_盛佩瑶: vector-benchmark: checking memory use,
+515021910153_盛佩瑶: vector-benchmark: memory check completed, report at 'res/515021910153_盛佩瑶/testres/mem-vector-benchmark'.
+core: start testing 515030910624_曹孟尧
+515030910624_曹孟尧: preparing the test...
+515030910624_曹孟尧: generated the headers.
+515030910624_曹孟尧: vector-basic: checking memory use,
+515030910624_曹孟尧: vector-basic: memory check completed, report at 'res/515030910624_曹孟尧/testres/mem-vector-basic'.
+515030910624_曹孟尧: vector-advan: checking memory use,
+515030910624_曹孟尧: vector-advan: memory check completed, report at 'res/515030910624_曹孟尧/testres/mem-vector-advan'.
+515030910624_曹孟尧: vector-benchmark: checking memory use,
+515030910624_曹孟尧: vector-benchmark: memory check completed, report at 'res/515030910624_曹孟尧/testres/mem-vector-benchmark'.
+core: start testing 515030910640_吴怡然
+515030910640_吴怡然: preparing the test...
+515030910640_吴怡然: generated the headers.
+515030910640_吴怡然: vector-basic: checking memory use,
+515030910640_吴怡然: vector-basic: memory check completed, report at 'res/515030910640_吴怡然/testres/mem-vector-basic'.
+515030910640_吴怡然: vector-advan: checking memory use,
+515030910640_吴怡然: vector-advan: memory check completed, report at 'res/515030910640_吴怡然/testres/mem-vector-advan'.
+515030910640_吴怡然: vector-benchmark: checking memory use,
+515030910640_吴怡然: vector-benchmark: memory check completed, report at 'res/515030910640_吴怡然/testres/mem-vector-benchmark'.
+core: start testing 515030910450_卢思迪
+515030910450_卢思迪: preparing the test...
+515030910450_卢思迪: generated the headers.
+515030910450_卢思迪: vector-basic: checking memory use,
+515030910450_卢思迪: vector-basic: memory check completed, report at 'res/515030910450_卢思迪/testres/mem-vector-basic'.
+515030910450_卢思迪: vector-advan: checking memory use,
+515030910450_卢思迪: vector-advan: memory check completed, report at 'res/515030910450_卢思迪/testres/mem-vector-advan'.
+515030910450_卢思迪: vector-benchmark: checking memory use,
+515030910450_卢思迪: vector-benchmark: memory check completed, report at 'res/515030910450_卢思迪/testres/mem-vector-benchmark'.
+core: start testing 515030910629_杜泓睿
+515030910629_杜泓睿: preparing the test...
+515030910629_杜泓睿: generated the headers.
+515030910629_杜泓睿: vector-basic: checking memory use,
+515030910629_杜泓睿: vector-basic: memory check completed, report at 'res/515030910629_杜泓睿/testres/mem-vector-basic'.
+515030910629_杜泓睿: vector-advan: checking memory use,
+515030910629_杜泓睿: vector-advan: memory check completed, report at 'res/515030910629_杜泓睿/testres/mem-vector-advan'.
+515030910629_杜泓睿: vector-benchmark: checking memory use,
+515030910629_杜泓睿: vector-benchmark: memory check completed, report at 'res/515030910629_杜泓睿/testres/mem-vector-benchmark'.
+core: start testing 515030910641_徐遥
+515030910641_徐遥: preparing the test...
+515030910641_徐遥: generated the headers.
+515030910641_徐遥: vector-basic: checking memory use,
+515030910641_徐遥: vector-basic: memory check completed, report at 'res/515030910641_徐遥/testres/mem-vector-basic'.
+515030910641_徐遥: vector-advan: checking memory use,
+515030910641_徐遥: vector-advan: memory check completed, report at 'res/515030910641_徐遥/testres/mem-vector-advan'.
+515030910641_徐遥: vector-benchmark: checking memory use,
+515030910641_徐遥: vector-benchmark: memory check completed, report at 'res/515030910641_徐遥/testres/mem-vector-benchmark'.
+core: start testing 515030910584_方智涌
+515030910584_方智涌: preparing the test...
+515030910584_方智涌: generated the headers.
+515030910584_方智涌: vector-basic: checking memory use,
+515030910584_方智涌: vector-basic: memory check completed, report at 'res/515030910584_方智涌/testres/mem-vector-basic'.
+515030910584_方智涌: vector-advan: checking memory use,
+515030910584_方智涌: vector-advan: memory check completed, report at 'res/515030910584_方智涌/testres/mem-vector-advan'.
+515030910584_方智涌: vector-benchmark: checking memory use,
+515030910584_方智涌: vector-benchmark: memory check completed, report at 'res/515030910584_方智涌/testres/mem-vector-benchmark'.
+core: start testing 515030910634_朱奕
+515030910634_朱奕: preparing the test...
+515030910634_朱奕: generated the headers.
+515030910634_朱奕: vector-basic: checking memory use,
+515030910634_朱奕: vector-basic: memory check completed, report at 'res/515030910634_朱奕/testres/mem-vector-basic'.
+515030910634_朱奕: vector-advan: checking memory use,
+515030910634_朱奕: vector-advan: memory check completed, report at 'res/515030910634_朱奕/testres/mem-vector-advan'.
+515030910634_朱奕: vector-benchmark: checking memory use,
+515030910634_朱奕: vector-benchmark: memory check completed, report at 'res/515030910634_朱奕/testres/mem-vector-benchmark'.
+core: start testing 515030910642_陈欣昊
+515030910642_陈欣昊: preparing the test...
+515030910642_陈欣昊: generated the headers.
+515030910642_陈欣昊: vector-basic: checking memory use,
+515030910642_陈欣昊: vector-basic: memory check completed, report at 'res/515030910642_陈欣昊/testres/mem-vector-basic'.
+515030910642_陈欣昊: vector-advan: checking memory use,
+515030910642_陈欣昊: vector-advan: memory check completed, report at 'res/515030910642_陈欣昊/testres/mem-vector-advan'.
+515030910642_陈欣昊: vector-benchmark: checking memory use,
+515030910642_陈欣昊: vector-benchmark: memory check completed, report at 'res/515030910642_陈欣昊/testres/mem-vector-benchmark'.
+core: start testing 515030910592_黎金宁
+515030910592_黎金宁: preparing the test...
+515030910592_黎金宁: generated the headers.
+515030910592_黎金宁: vector-basic: checking memory use,
+515030910592_黎金宁: vector-basic: memory check completed, report at 'res/515030910592_黎金宁/testres/mem-vector-basic'.
+515030910592_黎金宁: vector-advan: checking memory use,
+515030910592_黎金宁: vector-advan: memory check completed, report at 'res/515030910592_黎金宁/testres/mem-vector-advan'.
+515030910592_黎金宁: vector-benchmark: checking memory use,
+515030910592_黎金宁: vector-benchmark: memory check completed, report at 'res/515030910592_黎金宁/testres/mem-vector-benchmark'.
+core: start testing 515030910638_叶昊然
+515030910638_叶昊然: preparing the test...
+515030910638_叶昊然: generated the headers.
+515030910638_叶昊然: vector-basic: checking memory use,
+515030910638_叶昊然: vector-basic: memory check completed, report at 'res/515030910638_叶昊然/testres/mem-vector-basic'.
+515030910638_叶昊然: vector-advan: checking memory use,
+515030910638_叶昊然: vector-advan: memory check completed, report at 'res/515030910638_叶昊然/testres/mem-vector-advan'.
+515030910638_叶昊然: vector-benchmark: checking memory use,
+515030910638_叶昊然: vector-benchmark: memory check completed, report at 'res/515030910638_叶昊然/testres/mem-vector-benchmark'.
+core: start testing 515030910644_游志宇
+515030910644_游志宇: preparing the test...
+515030910644_游志宇: generated the headers.
+515030910644_游志宇: vector-basic: checking memory use,
+515030910644_游志宇: vector-basic: memory check completed, report at 'res/515030910644_游志宇/testres/mem-vector-basic'.
+515030910644_游志宇: vector-advan: checking memory use,
+515030910644_游志宇: vector-advan: memory check completed, report at 'res/515030910644_游志宇/testres/mem-vector-advan'.
+515030910644_游志宇: vector-benchmark: checking memory use,
+515030910644_游志宇: vector-benchmark: memory check completed, report at 'res/515030910644_游志宇/testres/mem-vector-benchmark'.
+core: start testing 515030910623_黄子璇
+515030910623_黄子璇: preparing the test...
+515030910623_黄子璇: generated the headers.
+515030910623_黄子璇: vector-basic: checking memory use,
+515030910623_黄子璇: vector-basic: memory check completed, report at 'res/515030910623_黄子璇/testres/mem-vector-basic'.
+515030910623_黄子璇: vector-advan: checking memory use,
+515030910623_黄子璇: vector-advan: memory check completed, report at 'res/515030910623_黄子璇/testres/mem-vector-advan'.
+515030910623_黄子璇: vector-benchmark: checking memory use,
+515030910623_黄子璇: vector-benchmark: memory check completed, report at 'res/515030910623_黄子璇/testres/mem-vector-benchmark'.
+core: start testing 515030910639_应思豪
+515030910639_应思豪: preparing the test...
+515030910639_应思豪: generated the headers.
+515030910639_应思豪: vector-basic: checking memory use,
+515030910639_应思豪: vector-basic: memory check completed, report at 'res/515030910639_应思豪/testres/mem-vector-basic'.
+515030910639_应思豪: vector-advan: checking memory use,
+515030910639_应思豪: vector-advan: memory check completed, report at 'res/515030910639_应思豪/testres/mem-vector-advan'.
+515030910639_应思豪: vector-benchmark: checking memory use,
+515030910639_应思豪: vector-benchmark: memory check completed, report at 'res/515030910639_应思豪/testres/mem-vector-benchmark'.

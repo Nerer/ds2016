@@ -1,0 +1,17 @@
+In file included from ./testspace/vector.hpp:1:0,
+                 from ./testspace/vector-advan.cc:1:
+./testspace/../submit/515030910592_黎金宁/vector.hpp: In instantiation of ‘void sjtu::vector<T>::doublespace() [with T = Integer]’:
+./testspace/../submit/515030910592_黎金宁/vector.hpp:437:15:   required from ‘void sjtu::vector<T>::push_back(const T&) [with T = Integer]’
+./testspace/vector-advan.cc:16:28:   required from here
+./testspace/../submit/515030910592_黎金宁/vector.hpp:212:24: error: no matching function for call to ‘Integer::Integer()’
+   T*p = new T[maxsize*2];
+                        ^
+In file included from ./testspace/vector-advan.cc:3:0:
+./testspace/class-integer.hpp:6:2: note: candidate: Integer::Integer(const Integer&)
+  Integer(const Integer &other) : data(other.data) {}
+  ^
+./testspace/class-integer.hpp:6:2: note:   candidate expects 1 argument, 0 provided
+./testspace/class-integer.hpp:5:2: note: candidate: Integer::Integer(const int&)
+  Integer(const int &value) : data(value) {}
+  ^
+./testspace/class-integer.hpp:5:2: note:   candidate expects 1 argument, 0 provided
